@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生活随笔分享 - 优质日常内容站点</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:Microsoft YaHei;line-height:1.8;background:#f5f7fa;color:#333;}
+        .container{max-width:1000px;margin:0 auto;padding:20px;}
+        header{background:#2c3e50;color:#fff;padding:30px 0;text-align:center;}
+        nav{background:#34495e;padding:15px 0;text-align:center;}
+        nav a{color:#fff;margin:0 15px;text-decoration:none;}
+        .ad-box{margin:25px 0;text-align:center;min-height:100px;}
+        .article{background:#fff;padding:30px;margin:20px 0;border-radius:8px;box-shadow:0 2px 10px #eee;}
+        h2{margin-bottom:15px;color:#2c3e50;}
+        p{margin-bottom:15px;font-size:16px;}
+        footer{text-align:center;padding:30px;background:#2c3e50;color:#fff;margin-top:40px;}
+    </style>
+    <!-- 此处预留AdSense所有权验证meta标签位置 -->
+</head>
+<body>
+    <header>
+        <h1>暖心生活随笔</h1>
+        <p>记录日常美好，分享治愈心情</p>
+    </header>
+    <nav>
+        <a href="/">首页</a>
+        <a href="#">生活感悟</a>
+        <a href="#">日常好物</a>
+        <a href="#">心灵治愈</a>
+    </nav>
+
+    <div class="container">
+        <!-- 广告位1：顶部通栏广告 -->
+        <div class="ad-box" id="ad-top">
+            <!-- 粘贴顶部AdSense广告代码 -->
+        </div>
+
+        <div class="article">
+            <h2>平淡日子里的小美好</h2>
+            <p>生活从来都不需要轰轰烈烈，平凡日常里藏着最多温柔。清晨的微风，傍晚的落日，一杯温热的茶水，都能治愈内心所有疲惫。</p>
+            <p>我们奔波于生活之中，常常忽略身边简单的幸福，慢下来用心感受，才发现美好一直都在身边。</p>
+
+            <!-- 广告位2：文章内穿插广告 -->
+            <div class="ad-box" id="ad-middle">
+                <!-- 粘贴文章内嵌广告代码 -->
+            </div>
+
+            <p>保持积极平和的心态，认真对待每一天，珍惜遇见的人和事，日子就会慢慢变得温柔又明亮。</p>
+        </div>
+
+        <div class="article">
+            <h2>自我成长与心态调整</h2>
+            <p>人生一路前行，一边经历一边成长。不必纠结过往遗憾，不必焦虑未知未来，专注当下就是最好的生活状态。</p>
+            <p>学会接纳不完美的自己，放宽心态，稳住脚步，慢慢努力，时间终会回馈所有坚持与付出。</p>
+        </div>
+
+        <!-- 广告位3：页面底部广告 -->
+        <div class="ad-box" id="ad-bottom">
+            <!-- 粘贴底部AdSense广告代码 -->
+        </div>
+    </div>
+
+    <footer>
+        <p>©2026 暖心生活随笔 版权所有 | 正规合规内容站点</p>
+    </footer>
+</body>
+</html>
