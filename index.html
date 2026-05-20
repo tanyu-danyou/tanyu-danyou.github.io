@@ -3,55 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生活随笔分享 - 优质日常内容站点</title>
+    <meta name="description" content="GitHub Pages建站教程、Google AdSense注册与避坑指南，新手从零开始免费建站、挂广告赚钱">
+    <title>新手建站教程｜GitHub Pages + AdSense 保姆指南</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:Microsoft YaHei;line-height:1.8;background:#f5f7fa;color:#333;}
+        body{font-family:"Microsoft YaHei",sans-serif;line-height:1.8;background:#f8f9fa;color:#333;}
         .container{max-width:1000px;margin:0 auto;padding:20px;}
-        header{background:#2c3e50;color:#fff;padding:30px 0;text-align:center;}
-        nav{background:#34495e;padding:15px 0;text-align:center;}
-        nav a{color:#fff;margin:0 15px;text-decoration:none;}
-        .ad-box{margin:25px 0;text-align:center;min-height:100px;}
-        .article{background:#fff;padding:30px;margin:20px 0;border-radius:8px;box-shadow:0 2px 10px #eee;}
-        h2{margin-bottom:15px;color:#2c3e50;}
-        p{margin-bottom:15px;}
+        header{background:#2c3e50;color:#fff;padding:40px 0;text-align:center;}
+        header h1{font-size:2.2rem;margin-bottom:10px;}
+        header p{font-size:1.1rem;opacity:0.9;}
+        nav{background:#34495e;position:sticky;top:0;z-index:999;}
+        nav ul{display:flex;justify-content:center;flex-wrap:wrap;list-style:none;}
+        nav a{display:block;color:#fff;padding:15px 20px;text-decoration:none;transition:background 0.3s;}
+        nav a:hover{background:#2c3e50;}
+        .article{background:#fff;padding:30px;margin:20px 0;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+        .article h2{font-size:1.8rem;color:#2c3e50;margin-bottom:20px;border-left:4px solid #3498db;padding-left:10px;}
+        .article h3{font-size:1.4rem;color:#34495e;margin:25px 0 15px;}
+        .article p{font-size:1rem;margin-bottom:15px;line-height:1.9;}
+        .img-box{width:100%;max-width:800px;margin:20px auto;text-align:center;}
+        .img-box img{width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+        .tip{background:#e8f4fd;border-left:4px solid #3498db;padding:15px;margin:20px 0;border-radius:0 8px 8px 0;}
         footer{text-align:center;padding:30px;background:#2c3e50;color:#fff;margin-top:40px;}
+        @media (max-width:768px){
+            header h1{font-size:1.8rem;}
+            nav a{padding:12px 15px;}
+            .article{padding:20px;}
+        }
     </style>
-    <!-- 👇 AdSense 验证代码（必须保留，用于所有权验证） -->
+    <!-- AdSense 验证代码 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7135979855265648" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>生活随笔分享</h1>
-        <p>记录日常，分享美好</p>
+        <h1>新手建站教程</h1>
+        <p>GitHub Pages + Google AdSense 从零到一实战指南</p>
     </header>
 
     <nav>
-        <a href="#home">首页</a>
-        <a href="#article">随笔文章</a>
-        <a href="#about">关于我</a>
+        <ul>
+            <li><a href="#1">GitHub Pages建站</a></li>
+            <li><a href="#2">AdSense注册审核</a></li>
+            <li><a href="#3">税务W-8BEN填写</a></li>
+        </ul>
     </nav>
 
     <div class="container">
-        <div class="article">
-            <h2>欢迎来到我的小站</h2>
-            <p>这里是我的生活随笔分享站点，会不定期更新日常感悟、生活小技巧和一些碎碎念~</p>
-            <p>你可以在这里找到很多实用的生活经验，也可以看到我记录的生活里的小美好。</p>
+
+        <!-- 文章1：GitHub Pages建站（带真实网络图） -->
+        <div class="article" id="1">
+            <h2>新手GitHub Pages建站全流程｜0代码免费搭建个人网站</h2>
+            <p>很多新手想建个人网站，怕花钱、怕写代码，其实用GitHub Pages就能免费做！全程跟着步骤来，10分钟搞定，还能申请AdSense挂广告赚点零花钱。</p>
+
+            <h3>一、准备GitHub账号</h3>
+            <p>先注册GitHub账号，网址：github.com，用邮箱注册就行，免费。</p>
+            <div class="img-box">
+                <img src="https://img-blog.csdnimg.cn/20240315142208_8951.png" alt="GitHub注册页面">
+            </div>
+
+            <h3>二、创建专属仓库</h3>
+            <p>1. 点右上角「+」→ New repository<br>
+               2. 仓库名必须写：<strong>你的用户名.github.io</strong>（比如tanyu-danyou.github.io）<br>
+               3. 勾选Add a README file，直接创建</p>
+            <div class="img-box">
+                <img src="https://img-blog.csdnimg.cn/20240315142512_7263.png" alt="创建GitHub仓库">
+            </div>
+
+            <h3>三、上传网页文件</h3>
+            <p>1. 新建index.html文件，写简单网页代码<br>
+               2. 上传到仓库，提交更改<br>
+               3. 等待2-5分钟，GitHub自动部署</p>
+
+            <h3>四、访问你的网站</h3>
+            <p>浏览器输入：https://用户名.github.io，就能看到自己的网站啦！</p>
+
+            <div class="tip">
+                💡 <strong>小贴士：</strong>GitHub Pages免费、稳定、不用服务器，新手建站首选！
+            </div>
         </div>
 
-        <!-- 广告位预留（后续审核通过后可以在这里放广告代码） -->
-        <div class="ad-box">
-            <!-- 后续广告代码可以放在这里 -->
+        <!-- 文章2：AdSense注册与审核（带真实网络图） -->
+        <div class="article" id="2">
+            <h2>Google AdSense注册全流程｜GitHub Pages网站审核避坑</h2>
+            <p>GitHub Pages网站做好后，就能申请Google AdSense挂广告赚钱了！但新手很容易踩坑导致审核失败，这篇把注册、验证、审核全流程讲清楚，帮你一次过审。</p>
+
+            <h3>一、注册AdSense账号</h3>
+            <p>1. 访问adsense.google.com，用谷歌邮箱注册<br>
+               2. 输入你的GitHub Pages网址（xxx.github.io）<br>
+               3. 填写个人信息，提交注册</p>
+            <div class="img-box">
+                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-start-2025.png" alt="AdSense注册页面">
+            </div>
+
+            <h3>二、网站所有权验证（关键）</h3>
+            <p>1. 选择「AdSense代码段」验证<br>
+               2. 复制代码，放到index.html的&lt;head&gt;标签里<br>
+               3. 提交到GitHub，等待网站更新<br>
+               4. 回到AdSense点击验证，通过后才能提交审核</p>
+            <div class="img-box">
+                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-verify-code.png" alt="AdSense代码验证">
+            </div>
+
+            <h3>三、审核避坑要点（必看）</h3>
+            <p>1. 网站必须有原创内容（别抄别人的）<br>
+               2. 至少3-5篇完整文章，不要只有一句话<br>
+               3. 网站能正常访问，无违规内容<br>
+               4. 审核时间1-3天，耐心等待</p>
         </div>
 
-        <div class="article">
-            <h2>今日小感悟</h2>
-            <p>生活不需要太多复杂的东西，简单的一餐、一次散步、一段安静的阅读时光，都能让日子变得温柔起来。</p>
+        <!-- 文章3：税务W-8BEN填写（带真实网络图） -->
+        <div class="article" id="3">
+            <h2>AdSense税务信息填写｜中国用户W-8BEN避坑（少扣20%税）</h2>
+            <p>AdSense审核通过后，必须填写税务信息，不然赚了钱也提不出来！中国用户填W-8BEN表格，能享受中美税收协定优惠，税率从30%降到10%，这步千万别填错。</p>
+
+            <h3>一、税务信息入口</h3>
+            <p>AdSense后台→付款→付款信息→添加税务信息</p>
+            <div class="img-box">
+                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-tax-entry.png" alt="税务信息入口">
+            </div>
+
+            <h3>二、填写要点（全是坑）</h3>
+            <p>1. 身份选「个人」，国家选「中国」<br>
+               2. 姓名用拼音（和银行卡一致，比如YANG JINGCHI）<br>
+               3. 地址必须用拼音/英文，不能写中文（否则报错）<br>
+               4. 税号填身份证号码<br>
+               5. 收入类型选「服务或其他商业收入（AdSense）」</p>
+            <div class="img-box">
+                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-w8ben-fill.png" alt="W-8BEN填写">
+            </div>
+
+            <h3>三、签名提交</h3>
+            <p>最后输入拼音姓名签名，提交后1-2天生效，之后收款就只扣10%税了。</p>
+
+            <div class="tip">
+                ⚠️ <strong>重要提醒：</strong>姓名拼音、地址英文千万别写错，否则审核失败！
+            </div>
         </div>
+
+        <!-- 广告位预留（审核通过后放广告代码） -->
+        <div class="ad-box" style="margin:30px 0;text-align:center;">
+            <!-- AdSense广告位 -->
+        </div>
+
     </div>
 
     <footer>
-        <p>© 2026 生活随笔分享 | 版权所有</p>
+        <p>© 2026 新手建站教程 | GitHub Pages + AdSense 实战分享</p>
     </footer>
 </body>
 </html>
