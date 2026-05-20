@@ -20,9 +20,12 @@
         .article h2{font-size:1.8rem;color:#2c3e50;margin-bottom:20px;border-left:4px solid #3498db;padding-left:10px;}
         .article h3{font-size:1.4rem;color:#34495e;margin:25px 0 15px;}
         .article p{font-size:1rem;margin-bottom:15px;line-height:1.9;}
+        .article ul, .article ol{margin:15px 0 15px 30px;}
+        .article li{margin-bottom:10px;line-height:1.8;}
         .img-box{width:100%;max-width:800px;margin:20px auto;text-align:center;}
         .img-box img{width:100%;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
         .tip{background:#e8f4fd;border-left:4px solid #3498db;padding:15px;margin:20px 0;border-radius:0 8px 8px 0;}
+        .warning{background:#fff3e0;border-left:4px solid #ff9800;padding:15px;margin:20px 0;border-radius:0 8px 8px 0;}
         footer{text-align:center;padding:30px;background:#2c3e50;color:#fff;margin-top:40px;}
         @media (max-width:768px){
             header h1{font-size:1.8rem;}
@@ -49,93 +52,167 @@
 
     <div class="container">
 
-        <!-- 文章1：GitHub Pages建站（带真实网络图） -->
+        <!-- 文章1：GitHub Pages建站（超详细版） -->
         <div class="article" id="1">
             <h2>新手GitHub Pages建站全流程｜0代码免费搭建个人网站</h2>
-            <p>很多新手想建个人网站，怕花钱、怕写代码，其实用GitHub Pages就能免费做！全程跟着步骤来，10分钟搞定，还能申请AdSense挂广告赚点零花钱。</p>
+            <p>很多新手想建个人网站，怕花钱买服务器、怕写复杂代码，其实用 GitHub Pages 就能免费、稳定地搭建一个静态网站，全程跟着步骤来，10分钟搞定，后续还能申请 Google AdSense 挂广告赚点零花钱。</p>
 
-            <h3>一、准备GitHub账号</h3>
-            <p>先注册GitHub账号，网址：github.com，用邮箱注册就行，免费。</p>
+            <h3>一、准备GitHub账号（0门槛注册）</h3>
+            <p>首先，你需要一个免费的 GitHub 账号，它是我们搭建网站的基础。</p>
+            <ol>
+                <li>打开 GitHub 官网：<code>github.com</code></li>
+                <li>点击右上角的「Sign up」按钮，进入注册页面</li>
+                <li>输入你的邮箱地址、设置密码、创建用户名，注意：<strong>这个用户名非常重要，后面你的网站域名就是「用户名.github.io」</strong></li>
+                <li>完成人机验证，点击「Create account」即可注册成功</li>
+            </ol>
             <div class="img-box">
-                <img src="https://img-blog.csdnimg.cn/20240315142208_8951.png" alt="GitHub注册页面">
+                <img src="https://cdn.jsdelivr.net/gh/github/docs/assets/images/help/setup/create-account.png" alt="GitHub注册页面">
+            </div>
+            <div class="warning">
+                ⚠️ <strong>避坑提醒：</strong>用户名一旦创建就不能修改，建议取一个和你网站主题相关、好记的名字，比如「tanyu-danyou」。
             </div>
 
-            <h3>二、创建专属仓库</h3>
-            <p>1. 点右上角「+」→ New repository<br>
-               2. 仓库名必须写：<strong>你的用户名.github.io</strong>（比如tanyu-danyou.github.io）<br>
-               3. 勾选Add a README file，直接创建</p>
+            <h3>二、创建专属仓库（决定你的网站域名）</h3>
+            <p>GitHub Pages 是通过仓库来部署网站的，你需要创建一个名字格式固定的仓库。</p>
+            <ol>
+                <li>登录后，点击页面右上角的「+」号，选择「New repository」</li>
+                <li>在「Repository name」里，必须输入 <strong>你的用户名.github.io</strong>（比如你的情况就是：<code>tanyu-danyou.github.io</code>），一个字母都不能错</li>
+                <li>「Description」可以留空，也可以写你的网站介绍</li>
+                <li>勾选「Add a README file」，其他选项保持默认</li>
+                <li>点击「Create repository」，仓库就创建好了</li>
+            </ol>
             <div class="img-box">
-                <img src="https://img-blog.csdnimg.cn/20240315142512_7263.png" alt="创建GitHub仓库">
+                <img src="https://cdn.jsdelivr.net/gh/github/docs/assets/images/help/repository/create-repository.png" alt="创建GitHub仓库">
+            </div>
+            <div class="tip">
+                💡 <strong>小贴士：</strong>只有名字格式为「用户名.github.io」的仓库，才会被 GitHub 自动识别为 Pages 网站，其他名字的仓库需要额外设置。
             </div>
 
-            <h3>三、上传网页文件</h3>
-            <p>1. 新建index.html文件，写简单网页代码<br>
-               2. 上传到仓库，提交更改<br>
-               3. 等待2-5分钟，GitHub自动部署</p>
+            <h3>三、上传你的网页文件（index.html）</h3>
+            <p>仓库创建好了，现在需要把你的网页文件上传进去，网站才能显示内容。</p>
+            <ol>
+                <li>进入刚创建好的仓库，点击「Add file」→「Upload files」</li>
+                <li>把你写好的 <code>index.html</code> 文件拖到上传区域，或者点击「choose your files」选择文件</li>
+                <li>在下方「Commit changes」里，输入一个描述，比如「Initial commit」</li>
+                <li>点击「Commit changes」提交文件</li>
+            </ol>
+            <p>这里有一个关键细节：<strong>仓库里必须有一个名为 index.html 的文件</strong>，它是网站的默认首页，没有它网站就无法正常显示。</p>
 
-            <h3>四、访问你的网站</h3>
-            <p>浏览器输入：https://用户名.github.io，就能看到自己的网站啦！</p>
+            <h3>四、部署并访问你的网站</h3>
+            <p>文件提交后，GitHub 会自动帮你部署网站，这个过程一般需要2-5分钟。</p>
+            <ol>
+                <li>部署完成后，打开浏览器，输入你的网站地址：<code>https://你的用户名.github.io</code>（比如你的就是：<code>https://tanyu-danyou.github.io</code>）</li>
+                <li>如果能看到你写的网页内容，就说明网站搭建成功了！</li>
+            </ol>
 
             <div class="tip">
-                💡 <strong>小贴士：</strong>GitHub Pages免费、稳定、不用服务器，新手建站首选！
+                💡 <strong>总结：</strong>GitHub Pages 免费、稳定、不用维护服务器，是新手搭建个人博客、教程站的首选平台，也是申请 Google AdSense 最省事的方式。
             </div>
         </div>
 
-        <!-- 文章2：AdSense注册与审核（带真实网络图） -->
+        <!-- 文章2：AdSense注册与审核（超详细版） -->
         <div class="article" id="2">
             <h2>Google AdSense注册全流程｜GitHub Pages网站审核避坑</h2>
-            <p>GitHub Pages网站做好后，就能申请Google AdSense挂广告赚钱了！但新手很容易踩坑导致审核失败，这篇把注册、验证、审核全流程讲清楚，帮你一次过审。</p>
+            <p>GitHub Pages 网站做好后，下一步就是申请 Google AdSense，在网站上挂广告赚钱了！但很多新手会因为各种问题导致审核失败，这篇我把注册、验证、审核全流程的关键细节和避坑点讲清楚，帮你一次过审。</p>
 
-            <h3>一、注册AdSense账号</h3>
-            <p>1. 访问adsense.google.com，用谷歌邮箱注册<br>
-               2. 输入你的GitHub Pages网址（xxx.github.io）<br>
-               3. 填写个人信息，提交注册</p>
+            <h3>一、注册AdSense账号（用谷歌邮箱）</h3>
+            <p>注册 AdSense 必须使用谷歌邮箱，没有的话需要先注册一个 Gmail。</p>
+            <ol>
+                <li>打开 AdSense 官网：<code>adsense.google.com</code></li>
+                <li>点击「开始使用」，用你的 Gmail 邮箱登录</li>
+                <li>在「您的网站」里，输入你的 GitHub Pages 网址，比如 <code>https://tanyu-danyou.github.io</code></li>
+                <li>填写你的个人信息，包括国家、时区、收款人信息，注意信息要和后面税务信息里的一致</li>
+                <li>提交注册申请</li>
+            </ol>
             <div class="img-box">
-                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-start-2025.png" alt="AdSense注册页面">
+                <img src="https://support.google.com/adsense/answer/imgs/9727/adsense_signup.png" alt="AdSense注册页面">
             </div>
 
-            <h3>二、网站所有权验证（关键）</h3>
-            <p>1. 选择「AdSense代码段」验证<br>
-               2. 复制代码，放到index.html的&lt;head&gt;标签里<br>
-               3. 提交到GitHub，等待网站更新<br>
-               4. 回到AdSense点击验证，通过后才能提交审核</p>
+            <h3>二、网站所有权验证（过审的第一道门槛）</h3>
+            <p>AdSense 必须确认这个网站是你本人所有的，才会继续审核你的申请，最常用的方法是「添加 AdSense 代码段」。</p>
+            <ol>
+                <li>在 AdSense 后台，选择「验证您的网站」，方法选择「复制并粘贴代码段」</li>
+                <li>复制生成的验证代码，这段代码是唯一的，和你的账号绑定</li>
+                <li>打开你 GitHub 仓库里的 <code>index.html</code> 文件，把代码粘贴到 <code>&lt;head&gt;</code> 标签的最末尾</li>
+                <li>提交修改，等待网站更新生效（约2-5分钟）</li>
+                <li>回到 AdSense 后台，点击「验证」按钮，系统会检查你的网站是否包含这段代码</li>
+            </ol>
             <div class="img-box">
-                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-verify-code.png" alt="AdSense代码验证">
+                <img src="https://support.google.com/adsense/answer/imgs/6002/adsense_verify_code.png" alt="AdSense代码验证">
+            </div>
+            <div class="warning">
+                ⚠️ <strong>避坑提醒：</strong>
+                <ul>
+                    <li>代码必须放在 <code>&lt;head&gt;</code> 标签里，不能放在 <code>&lt;body&gt;</code> 里，否则验证会失败</li>
+                    <li>提交修改后，一定要等网站更新生效再点击验证，否则会提示找不到代码</li>
+                </ul>
             </div>
 
-            <h3>三、审核避坑要点（必看）</h3>
-            <p>1. 网站必须有原创内容（别抄别人的）<br>
-               2. 至少3-5篇完整文章，不要只有一句话<br>
-               3. 网站能正常访问，无违规内容<br>
-               4. 审核时间1-3天，耐心等待</p>
+            <h3>三、提交审核并等待结果</h3>
+            <p>所有权验证通过后，就可以提交网站审核了，这是决定你能不能通过的关键一步。</p>
+            <ol>
+                <li>验证通过后，AdSense 后台会显示「您的网站正在审核中」</li>
+                <li>审核时间一般为 1-3 个工作日，慢的话可能需要一周，期间不要修改网站内容</li>
+                <li>审核结果会发送到你的 Gmail 邮箱，通过后你就能在后台看到「已批准」的状态</li>
+            </ol>
+
+            <h3>四、新手必看的审核避坑要点（通过率翻倍）</h3>
+            <p>很多新手的申请被拒，都是因为踩了这些坑，一定要注意：</p>
+            <ol>
+                <li><strong>内容原创且有价值</strong>：网站里必须有你自己写的原创内容，比如教程、心得，不能是空页面，也不能直接复制别人的文章，AdSense 会识别抄袭内容直接拒绝</li>
+                <li><strong>内容数量要足够</strong>：至少要有3-5篇完整的文章，每篇文章至少300字以上，有明确的主题和结构，不能只有几句话</li>
+                <li><strong>网站无违规内容</strong>：不能有色情、暴力、赌博、政治敏感等内容，也不能放盗版、侵权的资源链接</li>
+                <li><strong>网站能稳定访问</strong>：审核期间要保证 GitHub Pages 能正常打开，不能因为仓库设为私有或删除文件导致网站打不开</li>
+            </ol>
+            <div class="tip">
+                💡 <strong>我的经验：</strong>用 GitHub Pages 做的教程类网站，只要内容原创、结构清晰，通过率非常高，我自己就是一次通过的。
+            </div>
         </div>
 
-        <!-- 文章3：税务W-8BEN填写（带真实网络图） -->
+        <!-- 文章3：税务W-8BEN填写（超详细版） -->
         <div class="article" id="3">
             <h2>AdSense税务信息填写｜中国用户W-8BEN避坑（少扣20%税）</h2>
-            <p>AdSense审核通过后，必须填写税务信息，不然赚了钱也提不出来！中国用户填W-8BEN表格，能享受中美税收协定优惠，税率从30%降到10%，这步千万别填错。</p>
+            <p>AdSense 审核通过后，必须填写税务信息，不然赚了钱也提不出来！中国用户填写 W-8BEN 表格，可以享受中美税收协定优惠，税率从30%降到10%，这步千万别填错，不然会被扣一大半的税。</p>
 
-            <h3>一、税务信息入口</h3>
-            <p>AdSense后台→付款→付款信息→添加税务信息</p>
+            <h3>一、税务信息入口在哪？</h3>
+            <ol>
+                <li>登录 AdSense 后台，点击左侧菜单的「付款」</li>
+                <li>选择「付款信息」，在页面下方找到「税务信息」模块</li>
+                <li>点击「添加税务信息」，开始填写</li>
+            </ol>
             <div class="img-box">
-                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-tax-entry.png" alt="税务信息入口">
+                <img src="https://support.google.com/adsense/answer/imgs/6003/adsense_tax_info.png" alt="税务信息入口">
             </div>
 
-            <h3>二、填写要点（全是坑）</h3>
-            <p>1. 身份选「个人」，国家选「中国」<br>
-               2. 姓名用拼音（和银行卡一致，比如YANG JINGCHI）<br>
-               3. 地址必须用拼音/英文，不能写中文（否则报错）<br>
-               4. 税号填身份证号码<br>
-               5. 收入类型选「服务或其他商业收入（AdSense）」</p>
+            <h3>二、填写W-8BEN表格（中国用户专属）</h3>
+            <p>进入税务信息填写页面后，系统会自动为中国用户匹配 W-8BEN 表格，这是专门给非美国纳税人用的声明，填写步骤如下：</p>
+            <ol>
+                <li><strong>身份信息</strong>：选择「个人」，姓名用拼音填写，必须和你收款银行卡上的拼音姓名完全一致，比如你的情况就是 <code>YANG JINGCHI</code></li>
+                <li><strong>地址信息</strong>：国家选择「中国」，地址必须用拼音或英文填写，不能写中文，否则会报错。比如你的地址可以写成：<code>Liaojiazhen Cuicheng Community, Chongzhou City, Chengdu, Sichuan Province, China</code></li>
+                <li><strong>税号信息</strong>：税号填写你的身份证号码即可</li>
+                <li><strong>税务协定优惠</strong>：选择「是，我有资格享受更低的预扣税率」，国家选「中国」，收入类型勾选「服务或其他商业收入（如 AdSense）」，这样就能享受10%的优惠税率</li>
+            </ol>
             <div class="img-box">
-                <img src="https://frankknow.com/wp-content/uploads/2025/11/adsense-w8ben-fill.png" alt="W-8BEN填写">
+                <img src="https://support.google.com/adsense/answer/imgs/6004/adsense_w8ben_form.png" alt="W-8BEN填写">
+            </div>
+            <div class="warning">
+                ⚠️ <strong>避坑提醒：</strong>
+                <ul>
+                    <li>姓名拼音一定要和银行卡完全一致，顺序不能反，大小写不影响，但拼写不能错</li>
+                    <li>地址必须用英文/拼音，不能出现任何中文，否则无法提交</li>
+                    <li>一定要勾选税务协定优惠，不然会按30%的税率扣税，非常不划算</li>
+                </ul>
             </div>
 
-            <h3>三、签名提交</h3>
-            <p>最后输入拼音姓名签名，提交后1-2天生效，之后收款就只扣10%税了。</p>
+            <h3>三、签名提交并等待生效</h3>
+            <ol>
+                <li>所有信息填写完成后，在「认证并签名」部分，输入你的拼音姓名签名，和前面填写的一致</li>
+                <li>勾选同意声明，点击「提交」</li>
+                <li>提交后，Google 会审核你的税务信息，一般1-2个工作日内生效，生效后你的收款就会按10%的税率扣税了</li>
+            </ol>
 
             <div class="tip">
-                ⚠️ <strong>重要提醒：</strong>姓名拼音、地址英文千万别写错，否则审核失败！
+                💡 <strong>总结：</strong>税务信息填写是 AdSense 收款的关键一步，只要信息和银行卡、身份证保持一致，地址用英文填写，一次就能通过审核，后续收款就没有问题了。
             </div>
         </div>
 
